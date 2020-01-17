@@ -2,28 +2,16 @@ import * as serviceWorker from './serviceWorker';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-// import Router from './router';
-// import {Router,Route,Link} from 'react-router';
-import { Router, Route, Link, BrowserRouter, Switch} from 'react-router-dom'
+import { Route, Link, BrowserRouter, Switch} from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from './reducers'
 
 import News from './module/news'
+import { Login } from './module/login/index';
+import { SelfInfo } from './module/self-info/index';
+import { SelfBlog } from './module/self-blog/index';
 
-// const App = React.createClass({
-//   rander(){
-//     <div>
-//       <h1>i`m is app</h1>
-//       <ui>
-//         <li><link to="/news">to news</link> </li>
-//         <li><link to="/login">to login</link> </li>
-//       </ui>
-//       {this.props.children}
-//     </div>
-//   }
-// })
 const store = createStore(reducers);
 class App extends Component {
   render() {
@@ -34,6 +22,8 @@ class App extends Component {
         <ul>
           <li><Link to="/news">news</Link></li>
           <li><Link to="/login">login</Link></li>
+          <li><Link to="/selfinfo">selfInfo</Link></li>
+          <li><Link to="/selfblog">calendar</Link></li>
         </ul>
 
         {/*
@@ -45,33 +35,6 @@ class App extends Component {
     )
   }
 }
-// class News extends Component {
-//   render(){
-
-//     return (
-//       <div>news</div>
-//     )
-//   }
-// }
-class Login extends Component {
-  render(){
-    return (
-      <div>Login</div>
-    )
-  }
-}
-
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render((
-//   <Router>
-//     <Route path='/' component={App}>
-//       <Route path='news' component={News}></Route>
-//       <Route path='login' component={Login}></Route>
-//     </Route>
-//   </Router>
-// ),document.getElementById('root'))
-
 
 ReactDOM.render((
   <BrowserRouter>
@@ -79,7 +42,9 @@ ReactDOM.render((
       <Switch>
         <Route exact path='/' component={App} />
         <Route path="/news" component={News}/>
-        <Route path="/Login" component={Login}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/selfinfo" component={SelfInfo}/>
+        <Route path="/selfblog" component={SelfBlog}/>
       </Switch>
     </Provider>
   </BrowserRouter>

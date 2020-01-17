@@ -3,11 +3,11 @@ import News from '../../module/news'
 import { addone } from '../action'
 
 const mapStateToProps = (state, ownProps) => {
-  getNum: state+'@'
+  getNum: state + '@'
 }
 
 const mapDispatchToProps = (dispatch) => {
-  add: ()=>{
+  add: () => {
     dispatch(addone())
   }
 }

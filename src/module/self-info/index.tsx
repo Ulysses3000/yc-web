@@ -4,7 +4,7 @@ export class SelfInfo extends Component {
   render() {
     return (
       <div>
-        <h1>个人星系</h1>
+        <h1>Right Galaxy</h1>
       </div>
     )
   }
