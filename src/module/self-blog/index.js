@@ -4,7 +4,7 @@ export class SelfBlog extends Component {
   render() {
     return (
       <div>
-        我的博客列表
+        我的列表
       </div>
     )
   }
