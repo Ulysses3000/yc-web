@@ -16,27 +16,23 @@ class RCMenu extends React.Component {
   render() {
     return (
       <Menu
-        theme="dark"
         onClick={this.handleClick}
         selectedKeys={[this.state.current]}
         mode="horizontal">
           <Menu.Item key="news">
-            <Row>
-              <Icon type="mail" />
-              <Link to="/news">news</Link>
-            </Row>
+            <Link to="/news">
+              <Icon type="mail" /> news
+            </Link>
           </Menu.Item>
           <Menu.Item key="selfinfo">
-            <Row>
-              <Icon type="info-circle" />
-              <Link to="/selfinfo">selfInfo</Link>
-            </Row>
+            <Link to="/selfinfo">
+              <Icon type="info-circle" /> selfInfo
+            </Link>
           </Menu.Item>
           <Menu.Item key="selfblog">
-            <Row>
-              <Icon type="user" />
-              <Link to="/selfblog">selfblog</Link>
-            </Row>
+            <Link to="/selfblog">
+              <Icon type="user" /> selfblog
+            </Link>
           </Menu.Item>
       </Menu>
     )

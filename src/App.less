@@ -5,13 +5,35 @@ body {
 }
 .app {
   height: 100%;
-  // background-color: #f5f5f5;
+  .ant-layout-header {
+    background-color: #fff;
+  }
   .app-header {
     height: 64px;
   }
   .app-content-wrap {
+    background-color: #f5f5f5;
+    margin: 16px;
     .ant-layout-content {
-      margin: 16px;
+      margin: 0 16px 0 34px;
+      background-color: #fff;
+      padding: 16px;
+    }
+  }
+  .ant-layout-sider {
+    padding: 16px;
+  }
+  .ant-layout-footer {
+    background-color: #fff;
+    .footer-content {
+      text-align: center;
+      span {
+        font-size: 12px;
+        color: #999;
+        + span {
+          margin-left: 16px;
+        }
+      }
     }
   }
 }
