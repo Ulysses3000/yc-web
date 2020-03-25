@@ -11,6 +11,7 @@ export class App extends Component {
   render() {
     return (
       <Layout className="app">
+        <h2>网站建设中</h2>
         <Header className="app-header" theme="light">
           <RCMenu />
         </Header>
@@ -22,9 +23,8 @@ export class App extends Component {
         </Layout>
         <Footer>
           <div className="footer-content">
-            <span>Copyright 2020◎****</span>
-            <span>备案号: xxxx-xxxx-xxxx</span>
-            <span>版本：V1.0.1</span>
+            <span><a href="http://www.beian.miit.gov.cn">湘ICP18018933</a></span>
+            <span>v1.0.1</span>
           </div>
         </Footer>
       </Layout>
